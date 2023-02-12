@@ -68,9 +68,7 @@ const[popupwinner, setPopupwinner] = useState(null)
     setPopupwinner(board[x])
     setGameOver(true);
     setPopup(true)
-    return board[x];
-    
-    
+    return board[x];  
   }
 }
  }
