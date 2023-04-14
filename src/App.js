@@ -80,25 +80,27 @@ function App() {
   }
 
   return ( // thhis for the design 
-    <div className="font-poppins">
-     <div className={`fixed  z-10 top-1/2 left-1/2 transform transition-all duration-300 -translate-x-1/2  ${popup ? ' -translate-y-1/2' : '-translate-y-[900px]'}`}>
-  <div className="bg-white rounded-lg p-52 shadow-custom text-center">
-    <h2 className="text-3xl font-bold text-gray-800 mb-4">{popupwinner} wins!</h2>
-    <button className="main-button" onClick={GameReset}>Play Again</button>
+  <div className="font-poppins">
+  <div className={`fixed z-10 top-1/2 left-1/2 transform transition-all duration-300 -translate-x-1/2 ${popup ? '-translate-y-1/2' : '-translate-y-[900px]'}`}>
+    <div className="bg-white rounded-lg p-10 md:p-16 lg:p-20 xl:p-24 2xl:p-32 shadow-custom text-center">
+      <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-gray-800 mb-4">{popupwinner} wins!</h2>
+      <button className="main-button text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl" onClick={GameReset}>Play Again</button>
+    </div>
   </div>
+
+  <div>
+    <p className="text-2xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-oregano font-semibold text-center py-10">Tic Tac Toe</p>
+  </div>
+
+  <div className='w-fit h-fit mx-auto flex flex-col gap-5 justify-center items-center'>
+    <Display className="" score={score} first={first} />
+    <Board board={board} first={first} onClick={gameOver ? GameReset : handleClickBox} />
+
+    <button onClick={GameReset} className="second-button text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl">Reset</button>
+  </div>
+ 
 </div>
 
-      <div>
-        <p className="text-4xl font-oregano font-semibold text-center py-10">Tic Tac Toe</p>
-      </div>
-      <div className='w-fit h-fit mx-auto flex flex-col gap-5 justify-center items-center'>
-        <Display className="" score={score} first={first} />
-        <Board board={board} first={first} onClick={gameOver ? GameReset : handleClickBox} />
-
-        <button onClick={GameReset} className=" second-button ">Reset</button>
-      </div>
-      {/* <Turn/> */}
-    </div>
   );
 }
 
