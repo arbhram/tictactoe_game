@@ -12,6 +12,6 @@ export const Display = ({score, first}) => {
         <p className='text-2xl font-poppins font-medium text-blue-600'>O Score</p>
         <p className='text-xl font-medium '>{oScore}</p>
       </div>
-    </div>
+    </div> 
   )
 }

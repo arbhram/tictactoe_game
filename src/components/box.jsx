@@ -6,7 +6,7 @@ export const Box = ({ value, onClick, first, board, id }) => {
   const [HoverS, setHoverS] = useState(false)
 
 
-  return (
+  return (  
     <>
 
 

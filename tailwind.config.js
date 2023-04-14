@@ -1,21 +1,21 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
+  content: ["./src/**/*.{html,js,jsx,tsx,ts}"],
   theme: {
     extend: {
       fontFamily:{
-        poppins:[ 'Poppins']
+        poppins:[ 'Poppins'],
+        oregano:[ 'Oregano'],
+        nepali: ['Tiro Devanagari Sanskrit'],
+        aryan: ['Magnitude'], 
       },
       colors:{
-        backgroundColor1:"#1cc3b2",
-        backgroundColor2:"#343a40",
-        backgroundColor3:"#e8f1f8",
-      },
-    
+        main:'#000B15',
+        secondary:"#8EA7E9",
+        orange:"#E14D2A"
+      }
+      
     },
   },
   plugins: [],
 }
-
